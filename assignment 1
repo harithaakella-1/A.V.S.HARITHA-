@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() 
+{
+   FILE *f;
+   char ch[100];
+   int n,i;
+   char c;
+   f=fopen("prasu.doc","w");
+   printf("enter data");
+   gets(ch);
+   n=strlen(ch);
+   for(i=0;i<n;i++)
+   {
+       c=ch[i];
+       fputc(c,f);
+   }
+   printf("File is created");
+   fclose(f);
+   return 0;
+}
